@@ -4,17 +4,16 @@ reference - https://youtu.be/qBigTkBLU6g
 
 ---
 
-Imagine we measured somewhere and then we this tall and we measured someone....and we measured a whole bunch of people.
+Imagine we measured somewhere and then we this tall and we measured someone....and we measured a group of people.
 
 <img src="./resources/Screenshot-8.png" alt="Gaussian Naive Bayes -1" width=457px>
-
 
 We could try to make it easier to see hidden measurements by stacking any that are exactly the same but measurements that are exact same are rare, and a lot of the hidden measurements are still hidden.
 
 <img src="./resources/Screenshot-9.png" alt="Gaussian Naive Bayes -1" width=457px>
 <img src="./resources/Screenshot-10.png" alt="Gaussian Naive Bayes -1" width=457px>
 
-This is a histogram. The taller the  stack within a bin, the more measurements we made that fall into that bin.
+This is a histogram. The taller the stack within a bin, the more measurements we made that fall into that bin.
 
 <img src="./resources/Screenshot-11.png" alt="Gaussian Naive Bayes -1" width=457px>
 
@@ -36,7 +35,7 @@ reference - https://www.youtube.com/watch?v=rzFX5NWojp0
 
 <br>
 
-***Normal or Gaussian distribution (bell shaped curve)***
+**_Normal or Gaussian distribution (bell shaped curve)_**
 
 The y-axis represents the relative probability of observing someone who is really short, or really tall, or who has an average height.
 
@@ -46,12 +45,12 @@ The y-axis represents the relative probability of observing someone who is reall
 
 Just looking at the graph, we can tell that there is a high probability that a newborn baby will be between 19 and 21 inches tall.
 In contrast, adults are between 60 and 80 inches tall.
-The curve for babies is way tall compared to the curve for adults. This is because there are more possibilities for adult height than for babies. The more options there are for height, the less likely any specific measurement will be one of them. 
-***The Width of the curve is defined by the standard deviation.***
+The curve for babies is way tall compared to the curve for adults. This is because there are more possibilities for adult height than for babies. The more options there are for height, the less likely any specific measurement will be one of them.
+**_The Width of the curve is defined by the standard deviation._**
 By looking at the curves that babies have a relatively small standard deviation compared to adults.
 The standard deviation for babies is 0.6. The standard deviation for adults is 4.
 Knowing the standard deviation is helpful because normal curve are drawn such that 95% of the measurements fall between +/- 2 standard deviations around the mean.
-This  means that 95% of the baby measurements fall between 20 +/- 1.2 inches. And 95% of the adult measurements fall between 70 +/- 8 inches.
+This means that 95% of the baby measurements fall between 20 +/- 1.2 inches. And 95% of the adult measurements fall between 70 +/- 8 inches.
 
 <br>
 
@@ -59,7 +58,6 @@ This  means that 95% of the baby measurements fall between 20 +/- 1.2 inches. An
 
 1. The average measurement. This tells us where the center of the curve goes.
 2. The standard deviation of the measurements, this tells us how wide the curve should be. And the width of the curve determines how tall it is. The wider the curve, the shorter. The narrow the curve, the taller.
-
 
 <br>
 
@@ -73,7 +71,7 @@ reference - https://youtu.be/vikkiwjQqfU
 
 ---
 
-We could count the number of mRNA transcript for GeneX in every single cell. Imagine 240 billion green dots on this line represents the 240 billion cells in human liver. We can draw  a histogram of this measurement.
+We could count the number of mRNA transcript for GeneX in every single cell. Imagine 240 billion green dots on this line represents the 240 billion cells in human liver. We can draw a histogram of this measurement.
 
 <img src="./resources/Screenshot-13.png" alt="Gaussian Naive Bayes -1" width=457px>
 
@@ -81,21 +79,20 @@ Histogram tells us that most of the cells had between 20 and 30 mRNA transcripts
 
 <img src="./resources/Screenshot-14.png" alt="Gaussian Naive Bayes -1" width=457px>
 
-The mean, 20 is right in the middle and the standard deviation 10, corresponds to how wide the curve is around the mean. ***The standard deviation tells us how the data are spread around the mean***. 
+The mean, 20 is right in the middle and the standard deviation 10, corresponds to how wide the curve is around the mean. **_The standard deviation tells us how the data are spread around the mean_**.
 
 <img src="./resources/Screenshot-15.png" alt="Gaussian Naive Bayes -1" width=457px>
 
-Histogram represents every liver cell, or all the grocery stores in a specific chain, a statistician would say that it represents a population. Thus, the mean and standard deviation of the normal curve, which represents the population, are called population parameters. We call the mean the population mean and the standard deviation the population standard  deviation.
+Histogram represents every liver cell, or all the grocery stores in a specific chain, a statistician would say that it represents a population. Thus, the mean and standard deviation of the normal curve, which represents the population, are called population parameters. We call the mean the population mean and the standard deviation the population standard deviation.
 
 <img src="./resources/Screenshot-16.png" alt="Gaussian Naive Bayes -1" width=457px>
 
-We almost always estimate the population parameters using relatively small sample. In this case, we have measurements from only 5 of the 240 billion cells so we will use these 5 measurements to estimate the population parameters. The reason why we want to know the population parameters is to ensure that the results drawn from our experiment are reproducible. In other words, if someone else measured Gene X in 5 different liver cells then they get five different measurements. However, the new measurements  will come from the same population and insights derived from the population, like the probability of observing more that 30 mRNA transcripts in a single cell, will apply to both experiments or any future experiments. So instead of just describing  the 5 measurements that we made, we want to estimate the population parameters and use those as the basis for the results.
+We almost always estimate the population parameters using relatively small sample. In this case, we have measurements from only 5 of the 240 billion cells so we will use these 5 measurements to estimate the population parameters. The reason why we want to know the population parameters is to ensure that the results drawn from our experiment are reproducible. In other words, if someone else measured Gene X in 5 different liver cells then they get five different measurements. However, the new measurements will come from the same population and insights derived from the population, like the probability of observing more that 30 mRNA transcripts in a single cell, will apply to both experiments or any future experiments. So instead of just describing the 5 measurements that we made, we want to estimate the population parameters and use those as the basis for the results.
 It might be helpful to think these 5 measurements as the training data set and the curve that represents the population is what we want to predict.
 
 <img src="./resources/Screenshot-17.png" alt="Gaussian Naive Bayes -1" width=457px>
 
 The more data that we have, the more confidence we can have in accuracy of the estimates. One of the main goals in statistics is how much confidence we can have in population estimates. Statisticians always calculate p-values and confidence intervals to quantify the confidence in the estimated parameters.
-
 
 ---
 
@@ -109,7 +106,7 @@ If we want to fit a normal curve to a histogram then we need to calculate the po
 
 Population mean(myu) = average of all the measurements.
 
-Estimate population mean (sample mean(x bar)) =  average of the measuremnts collected.
+Estimate population mean (sample mean(x bar)) = average of the measuremnts collected.
 
 with more and more data estimated population mean gets closer and closer to the population mean.
 
@@ -118,12 +115,10 @@ To determine how wide to make the curve by calculating the variance and standard
 <img src="./resources/Screenshot-18.png" alt="Gaussian Naive Bayes -1" width=150px>
 <img src="./resources/Screenshot-19.png" alt="Gaussian Naive Bayes -1" width=250px>
 
-Instead if we estimated the population variance  and population standard deviation from the relatively small number of measurements that we have.
+Instead if we estimated the population variance and population standard deviation from the relatively small number of measurements that we have.
 
 <img src="./resources/Screenshot-20.png" alt="Gaussian Naive Bayes -1" width=150px>
 
 <img src="./resources/Screenshot-21.png" alt="Gaussian Naive Bayes -1" width=450px>
-
-
 
 ---
